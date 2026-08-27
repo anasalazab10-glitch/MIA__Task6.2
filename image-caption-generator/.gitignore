@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# local artifacts (downloaded model, cached features, etc.)
+artifacts/
+data/
+*.pt
+*.pth
+*.npz
