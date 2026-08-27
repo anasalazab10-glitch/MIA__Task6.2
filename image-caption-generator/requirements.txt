@@ -1,0 +1,14 @@
+torch
+torchvision
+pillow
+numpy
+pandas
+tqdm
+nltk
+rouge-score
+fastapi
+uvicorn
+python-multipart
+pytest
+huggingface_hub
+requests
