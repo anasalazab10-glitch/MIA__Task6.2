@@ -60,8 +60,12 @@ https://huggingface.co/Anas1010/flickr8k-image-caption-generator
 Direct file:
 - best_model.pt: https://huggingface.co/Anas1010/flickr8k-image-caption-generator/resolve/main/best_model.pt
   
-## How to Run (FastAPI)
+## Run locally (FastAPI)
 
-### Install dependencies
-```bash
-pip install -r image-caption-generator/requirements.txt
+### 1) Setup (Windows PowerShell)
+```powershell
+cd image-caption-generator
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install -e .
