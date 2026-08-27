@@ -59,4 +59,9 @@ https://huggingface.co/Anas1010/flickr8k-image-caption-generator
 
 Direct file:
 - best_model.pt: https://huggingface.co/Anas1010/flickr8k-image-caption-generator/resolve/main/best_model.pt
+  
+## How to Run (FastAPI)
 
+### Install dependencies
+```bash
+pip install -r image-caption-generator/requirements.txt
