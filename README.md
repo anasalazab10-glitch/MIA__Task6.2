@@ -73,6 +73,6 @@ python -m pip install -e .
 $env:ICG_DEVICE="cpu"   # or "cuda" if available
 python -m uvicorn app.api:app --host 127.0.0.1 --port 8000
 
-then open: Open:
+then open:
 
 http://127.0.0.1:8000/docs
