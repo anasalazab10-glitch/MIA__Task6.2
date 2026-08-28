@@ -1,20 +1,21 @@
-import io
+﻿import io
 import os
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from PIL import Image
 
-from icg.inference import CaptionGenerator
+from icg.inference_attn import AttentionCaptionGenerator
+
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="Image Caption Generator")
+    app = FastAPI(title="Image Caption Generator (Attention)")
 
     # Optional local paths; if empty, it auto-downloads from HF repo_id.
     vocab_path = os.getenv("ICG_VOCAB_PATH", "")
     ckpt_path  = os.getenv("ICG_CKPT_PATH", "")
-    repo_id    = os.getenv("ICG_REPO_ID", "Anas1010/flickr8k-image-caption-generator")
+    repo_id    = os.getenv("ICG_REPO_ID", "Anas1010/flickr8k-image-caption-generator-attn")
     device     = os.getenv("ICG_DEVICE", "cpu")
 
-    generator = CaptionGenerator(
+    generator = AttentionCaptionGenerator(
         vocab_path=vocab_path,
         checkpoint_path=ckpt_path,
         repo_id=repo_id,
@@ -40,5 +41,6 @@ def create_app() -> FastAPI:
         return {"filename": file.filename, "caption": caption}
 
     return app
+
 
 app = create_app()
