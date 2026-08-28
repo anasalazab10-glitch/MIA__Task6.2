@@ -54,12 +54,13 @@ Decoder:
 - the small child climbs on a red ropes on a playground
 
 ## Model Artifacts (Hugging Face)
-Model + vocab + metrics:
+
+**Attention model (default / best):**
+https://huggingface.co/Anas1010/flickr8k-image-caption-generator-attn
+
+**Baseline model (older):**
 https://huggingface.co/Anas1010/flickr8k-image-caption-generator
 
-Direct file:
-- best_model.pt: https://huggingface.co/Anas1010/flickr8k-image-caption-generator/resolve/main/best_model.pt
-  
 ## Run locally (FastAPI)
 
 ### 1) Setup (Windows PowerShell)
