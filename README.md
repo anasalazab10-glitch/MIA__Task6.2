@@ -43,6 +43,9 @@ Decoder:
 - ROUGE-L (F1): 0.4350
 - METEOR: 0.3678
 
+## Training / Evaluation Notebook (Kaggle)
+<(https://www.kaggle.com/code/anasalazab/notebookc002adc8dc#Beam-Search)>
+
 ## Qualitative example
 **Input image:** `1007320043_627395c3d8.jpg`  
 **Generated:** `two little girls are playing in a playground`  
@@ -76,3 +79,5 @@ python -m uvicorn app.api:app --host 127.0.0.1 --port 8000
 then open:
 
 http://127.0.0.1:8000/docs
+
+
