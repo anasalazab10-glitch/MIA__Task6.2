@@ -63,10 +63,16 @@ https://huggingface.co/Anas1010/flickr8k-image-caption-generator
 
 ## Run locally (FastAPI)
 
-### 1) Setup (Windows PowerShell)
 ```powershell
 cd image-caption-generator
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -m pip install -e .
+
+$env:ICG_DEVICE="cpu"   # or "cuda" if available
+python -m uvicorn app.api:app --host 127.0.0.1 --port 8000
+
+then open: Open:
+
+http://127.0.0.1:8000/docs
